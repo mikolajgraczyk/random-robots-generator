@@ -1,12 +1,12 @@
-import { StyledSection, Title } from "./styled";
+import { StyledSection, Title, Content } from "./styled";
 
-const Section = ({title, children}) => {
-    return(
-        <StyledSection>
-            <Title>{title}</Title>
-            {children}
-        </StyledSection>
-    );
+const Section = ({ title, children }) => {
+  return (
+    <StyledSection>
+      <Title>{title}</Title>
+      <Content>{children}</Content>
+    </StyledSection>
+  );
 };
 
 export default Section;
