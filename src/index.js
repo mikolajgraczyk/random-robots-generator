@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./features/App";
+import RobotsGenerator from "./features/RobotsGenerator";
 import reportWebVitals from "./reportWebVitals";
 import { theme } from "./theme";
 import { ThemeProvider } from "styled-components";
@@ -23,7 +23,7 @@ root.render(
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools />
       <GlobalStyle />
-      <App />
+      <RobotsGenerator />
     </QueryClientProvider>
   </ThemeProvider>
 );

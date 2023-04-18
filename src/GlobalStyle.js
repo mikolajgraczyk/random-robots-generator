@@ -9,5 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
     }
 
-    body{}
+    body{
+        margin: 0;
+    }
 `;
