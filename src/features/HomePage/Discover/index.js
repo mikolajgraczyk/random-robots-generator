@@ -35,7 +35,6 @@ const Discover = ({ data, status }) => {
   }
 
   if (data) {
-    console.log(data);
 
     return (
       <StyledDiscover>
@@ -46,7 +45,7 @@ const Discover = ({ data, status }) => {
               const age = calculateAge(dateOfBirth);
 
               return (
-                <Robot key={object.id}>
+                <Robot key={object.id} to={`/robot/${object.id}`}>
                   <Picture src={object.avatar} alt="" />
                   <Information>
                     <NameSection>

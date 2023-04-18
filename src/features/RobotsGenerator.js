@@ -1,14 +1,24 @@
 import HomePage from "./HomePage";
+import RobotPage from "./RobotPage";
 import { Container } from "./styled";
 import { getData } from "./getData";
 import { useQuery } from "@tanstack/react-query";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 function RobotsGenerator() {
   const { status, data } = useQuery(["data"], getData);
 
   return (
     <Container>
-      <HomePage data={data} status={status} />
+      <Routes>
+        <Route
+          path="/home"
+          element={<HomePage data={data} status={status} />}
+        />
+        <Route path="/robot/:id" element={<RobotPage data={data} />} />
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="*" element={<Navigate to="/home" />} />
+      </Routes>
     </Container>
   );
 }

@@ -7,6 +7,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { HashRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -19,13 +20,15 @@ const queryClient = new QueryClient({
 });
 
 root.render(
-  <ThemeProvider theme={theme}>
-    <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools />
-      <GlobalStyle />
-      <RobotsGenerator />
-    </QueryClientProvider>
-  </ThemeProvider>
+  <HashRouter>
+    <ThemeProvider theme={theme}>
+      <QueryClientProvider client={queryClient}>
+        <ReactQueryDevtools />
+        <GlobalStyle />
+        <RobotsGenerator />
+      </QueryClientProvider>
+    </ThemeProvider>
+  </HashRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

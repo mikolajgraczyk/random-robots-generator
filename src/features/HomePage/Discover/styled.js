@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const StyledDiscover = styled.div`
 `;
 
-export const Robot = styled.div`
+export const Robot = styled(Link)`
   border: 1px black solid;
   display: flex;
   align-items: center;
