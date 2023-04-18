@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledDiscover = styled.div`
-  max-height: 410px;
 `;
 
 export const Robot = styled.div`
@@ -22,7 +21,7 @@ export const Picture = styled.img`
 export const Information = styled.div``;
 
 export const NameSection = styled.div`
-width: 100px;
+width: 150px;
 `;
 
 export const Name = styled.span``;
