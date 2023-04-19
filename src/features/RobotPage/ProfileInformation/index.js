@@ -5,6 +5,7 @@ import BottomSection from "./BottomSection";
 import { useFavourites } from "../../useFavourites";
 
 const ProfileInformation = ({
+  id,
   image,
   name,
   surname,
@@ -22,6 +23,7 @@ const ProfileInformation = ({
   const clickHandler = () => {
     setFavourites([
       {
+        id,
         image,
         name,
         surname,
