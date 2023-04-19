@@ -1,16 +1,7 @@
 import { calculateAge } from "../../calculateAge";
-import {
-  StyledProfileInformation,
-  TopSection,
-  Info,
-  BasicInfo,
-  SpecificInfo,
-  Gender,
-  dateOfBirth,
-  Name,
-  Age,
-  Picture,
-} from "./styled";
+import { StyledProfileInformation } from "./styled";
+import TopSection from "./TopSection";
+import BottomSection from "./BottomSection";
 
 const ProfileInformation = ({
   image,
@@ -18,26 +9,27 @@ const ProfileInformation = ({
   dateOfBirth,
   gender,
   email,
-  adress,
+  address,
   phoneNumber,
+  employment,
 }) => {
   const age = calculateAge(dateOfBirth);
 
   return (
     <StyledProfileInformation>
-      <TopSection>
-        <Picture src={image} alt="" />
-        <Info>
-          <BasicInfo>
-            <Name>{name}</Name>
-            <Age>{age}</Age>
-          </BasicInfo>
-          <SpecificInfo>
-            <Gender>{gender}</Gender>
-            <dateOfBirth>{dateOfBirth}</dateOfBirth>
-          </SpecificInfo>
-        </Info>
-      </TopSection>
+      <TopSection
+        image={image}
+        name={name}
+        dateOfBirth={dateOfBirth}
+        gender={gender}
+        age={age}
+      />
+      <BottomSection 
+        email={email}
+        address={address}
+        phoneNumber={phoneNumber}
+        employment={employment}
+      />
     </StyledProfileInformation>
   );
 };

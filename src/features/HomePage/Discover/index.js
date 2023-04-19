@@ -35,7 +35,7 @@ const Discover = ({ data, status }) => {
                       <Name>{object.first_name} </Name>
                       <Surname>{object.last_name}</Surname>
                     </NameSection>
-                    <Gender>{object.gender}</Gender>
+                    <Gender>{object.gender} </Gender>
                     <Age>{age}</Age>
                   </Information>
                 </Robot>
