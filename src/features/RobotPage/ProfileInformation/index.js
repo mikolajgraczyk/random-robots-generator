@@ -21,6 +21,12 @@ const ProfileInformation = ({
   const age = calculateAge(dateOfBirth);
 
   const clickHandler = () => {
+    const isFavourite = favourites.some((object) => object.id == id);
+
+    if (isFavourite) {
+      return;
+    }
+
     setFavourites([
       {
         id,
