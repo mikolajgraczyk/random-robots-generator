@@ -1,11 +1,14 @@
 import { useParams, Navigate } from "react-router-dom";
 import ProfileInformation from "./ProfileInformation";
+import { useFavourites } from "../useFavourites";
 
 const RobotPage = ({ data }) => {
   const { id } = useParams();
+  const [favourites] = useFavourites();
 
   if (data) {
     const robotData = data.find((object) => object.id == id);
+    const favouriteRobotData = favourites.find((object) => object.id == id);
 
     if (robotData) {
       return (
@@ -23,6 +26,25 @@ const RobotPage = ({ data }) => {
         />
       );
     }
+
+    if(favouriteRobotData){
+      return (
+        <ProfileInformation
+          id={id}
+          image={favouriteRobotData.image}
+          name={favouriteRobotData.name}
+          surname={favouriteRobotData.surname}
+          dateOfBirth={favouriteRobotData.dateOfBirth}
+          gender={favouriteRobotData.gender}
+          email={favouriteRobotData.email}
+          address={favouriteRobotData.address}
+          phoneNumber={favouriteRobotData.phone_number}
+          employment={favouriteRobotData.employment}
+          favorite
+        />
+      );
+    }
+
     return <Navigate to="/home" />;
   }
 };

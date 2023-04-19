@@ -15,6 +15,7 @@ const ProfileInformation = ({
   address,
   phoneNumber,
   employment,
+  favorite,
 }) => {
   const [favourites, setFavourites] = useFavourites();
 
@@ -61,7 +62,9 @@ const ProfileInformation = ({
         phoneNumber={phoneNumber}
         employment={employment}
       />
-      <button onClick={clickHandler}>Add to favourites</button>
+      <button onClick={clickHandler}>
+        {favorite ? "Remove from favorites" : "Add to favourites"}
+      </button>
     </StyledProfileInformation>
   );
 };
