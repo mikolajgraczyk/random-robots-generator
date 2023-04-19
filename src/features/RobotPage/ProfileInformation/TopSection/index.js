@@ -10,13 +10,14 @@ import {
   Picture,
 } from "./styled";
 
-const TopSection = ({image, name, age, gender, dateOfBirth}) => {
+const TopSection = ({ image, name, surname, age, gender, dateOfBirth }) => {
   return (
     <StyledTopSection>
       <Picture src={image} alt="" />
       <Info>
         <BasicInfo>
           <Name>{name}</Name>
+          <Name>{surname}</Name>
           <Age>{age}</Age>
         </BasicInfo>
         <SpecificInfo>

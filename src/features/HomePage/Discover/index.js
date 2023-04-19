@@ -1,17 +1,7 @@
 import Section from "../../../common/Section";
 import { List } from "../../../common/List";
 import { calculateAge } from "../../calculateAge";
-import {
-  StyledDiscover,
-  Robot,
-  Information,
-  Picture,
-  NameSection,
-  Name,
-  Surname,
-  Gender,
-  Age,
-} from "./styled";
+import RobotTile from "../../../common/RobotTile";
 
 const Discover = ({ data, status }) => {
   if (status === "loading") {
@@ -20,30 +10,26 @@ const Discover = ({ data, status }) => {
 
   if (data) {
     return (
-      <StyledDiscover>
-        <Section title="Discover">
-          <List>
-            {data.map((object) => {
-              const dateOfBirth = object.date_of_birth;
-              const age = calculateAge(dateOfBirth);
+      <Section title="Discover">
+        <List>
+          {data.map((object) => {
+            const dateOfBirth = object.date_of_birth;
+            const age = calculateAge(dateOfBirth);
 
-              return (
-                <Robot key={object.id} to={`/robot/${object.id}`}>
-                  <Picture src={object.avatar} alt="" />
-                  <Information>
-                    <NameSection>
-                      <Name>{object.first_name} </Name>
-                      <Surname>{object.last_name}</Surname>
-                    </NameSection>
-                    <Gender>{object.gender} </Gender>
-                    <Age>{age}</Age>
-                  </Information>
-                </Robot>
-              );
-            })}
-          </List>
-        </Section>
-      </StyledDiscover>
+            return (
+              <RobotTile
+                id={object.id}
+                key={object.id}
+                picture={object.avatar}
+                name={object.first_name}
+                surname={object.last_name}
+                gender={object.gender}
+                age={age}
+              />
+            );
+          })}
+        </List>
+      </Section>
     );
   }
 };

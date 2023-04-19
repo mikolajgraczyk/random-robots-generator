@@ -6,12 +6,13 @@ const RobotPage = ({ data }) => {
 
   if (data) {
     const robotData = data.find((object) => object.id == id);
-    console.log(robotData);
+
     if (robotData) {
       return (
         <ProfileInformation
           image={robotData.avatar}
-          name={`${robotData.first_name} ${robotData.last_name}`}
+          name={robotData.first_name}
+          surname={robotData.last_name}
           dateOfBirth={robotData.date_of_birth}
           gender={robotData.gender}
           email={robotData.email}
