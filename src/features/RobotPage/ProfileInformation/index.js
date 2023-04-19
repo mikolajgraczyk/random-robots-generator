@@ -33,6 +33,7 @@ const ProfileInformation = ({
         address,
         phoneNumber,
         employment,
+        age,
       },
       ...favourites,
     ]);
@@ -55,7 +56,6 @@ const ProfileInformation = ({
         employment={employment}
       />
       <button onClick={clickHandler}>Add to favourites</button>
-      <button onClick={() => console.log(favourites)}>Show favourites</button>
     </StyledProfileInformation>
   );
 };

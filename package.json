@@ -1,6 +1,6 @@
 {
   "name": "random-people-generator",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": true,
   "dependencies": {
     "@tanstack/react-query": "^4.29.3",
