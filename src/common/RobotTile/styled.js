@@ -19,7 +19,6 @@ export const Picture = styled.img`
 export const Information = styled.div``;
 
 export const NameSection = styled.div`
-  width: 150px;
 `;
 
 export const Name = styled.span``;

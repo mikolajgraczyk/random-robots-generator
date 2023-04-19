@@ -18,7 +18,7 @@ const RobotTile = ({ id, picture, name, surname, gender, age }) => {
           <Name>{name} </Name>
           <Surname>{surname}</Surname>
         </NameSection>
-        <Gender>{gender}</Gender>
+        <Gender>{gender} </Gender>
         <Age>{age}</Age>
       </Information>
     </Robot>
