@@ -1,5 +1,5 @@
 import Section from "../../../common/Section";
-import { List } from "../../../common/List";
+import { List } from "./styled";
 import { calculateAge } from "../../calculateAge";
 import RobotTile from "../../../common/RobotTile";
 

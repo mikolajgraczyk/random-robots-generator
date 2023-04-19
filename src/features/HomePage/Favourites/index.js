@@ -7,19 +7,19 @@ const Favourites = () => {
 
   return (
     <Section title="Favourites">
-      {favourites.map((object) => {
-        return (
-          <RobotTile
-            key={object.id}
-            id={object.id}
-            picture={object.image}
-            name={object.name}
-            surname={object.surname}
-            gender={object.gender}
-            age={object.age}
-          />
-        );
-      })}
+        {favourites.map((object) => {
+          return (
+            <RobotTile
+              key={object.id}
+              id={object.id}
+              picture={object.image}
+              name={object.name}
+              surname={object.surname}
+              gender={object.gender}
+              age={object.age}
+            />
+          );
+        })}
     </Section>
   );
 };

@@ -40,7 +40,6 @@ const RobotPage = ({ data }) => {
           address={favouriteRobotData.address}
           phoneNumber={favouriteRobotData.phone_number}
           employment={favouriteRobotData.employment}
-          favorite
         />
       );
     }

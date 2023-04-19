@@ -15,16 +15,15 @@ const ProfileInformation = ({
   address,
   phoneNumber,
   employment,
-  favorite,
 }) => {
   const [favourites, setFavourites] = useFavourites();
 
   const age = calculateAge(dateOfBirth);
+  const isFavourite = favourites.some((object) => object.id == id);
 
   const clickHandler = () => {
-    const isFavourite = favourites.some((object) => object.id == id);
-
     if (isFavourite) {
+      setFavourites(favourites.filter((object) => object.id !== id));
       return;
     }
 
@@ -63,7 +62,7 @@ const ProfileInformation = ({
         employment={employment}
       />
       <button onClick={clickHandler}>
-        {favorite ? "Remove from favorites" : "Add to favourites"}
+        {isFavourite ? "Remove from favorites" : "Add to favourites"}
       </button>
     </StyledProfileInformation>
   );
