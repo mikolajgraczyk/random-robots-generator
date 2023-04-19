@@ -1,5 +1,6 @@
 import Section from "../../../common/Section";
 import { List } from "../../../common/List";
+import { calculateAge } from "../../calculateAge";
 import {
   StyledDiscover,
   Robot,
@@ -9,33 +10,15 @@ import {
   Name,
   Surname,
   Gender,
-  Age
+  Age,
 } from "./styled";
 
 const Discover = ({ data, status }) => {
-  const calculateAge = (dateString) => {
-    const birthDate = new Date(dateString);
-    const today = new Date();
-
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const monthDiff = today.getMonth() - birthDate.getMonth();
-
-    if (
-      monthDiff < 0 ||
-      (monthDiff === 0 && today.getDate() < birthDate.getDate())
-    ) {
-      age--;
-    }
-
-    return age;
-  };
-
   if (status === "loading") {
     return <Section title="Discover">ładowanie</Section>;
   }
 
   if (data) {
-
     return (
       <StyledDiscover>
         <Section title="Discover">
