@@ -1,12 +1,16 @@
 import Section from "../../../common/Section";
-import { StyledDiscover, List } from "./styled";
+import { StyledDiscover, List, LoadingCircle } from "./styled";
 import { calculateAge } from "../../calculateAge";
 import RobotTile from "../../../common/RobotTile";
 import { Button } from "../../../common/Button/styled";
 
 const Discover = ({ data, status, refetch }) => {
   if (status === "loading") {
-    return <Section title="Discover">ładowanie</Section>;
+    return(
+      <Section title="Discover">
+        <LoadingCircle />
+      </Section>
+    );
   }
 
   if (data) {
