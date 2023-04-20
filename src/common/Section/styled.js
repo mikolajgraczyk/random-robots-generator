@@ -5,8 +5,7 @@ export const StyledSection = styled.section``;
 export const Title = styled.h1``;
 
 export const Content = styled.div`
-  max-height: 370px;
-  height: 100%;
+  height: 370px;
   overflow-y: scroll;
   border: 1px black solid;
 `;
