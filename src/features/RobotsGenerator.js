@@ -6,14 +6,14 @@ import { useQuery } from "@tanstack/react-query";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 function RobotsGenerator() {
-  const { status, data } = useQuery(["data"], getData);
+  const { status, data, refetch } = useQuery(["data"], getData);
 
   return (
     <Container>
       <Routes>
         <Route
           path="/home"
-          element={<HomePage data={data} status={status} />}
+          element={<HomePage data={data} status={status} refetch={refetch}/>}
         />
         <Route path="/robot/:id" element={<RobotPage data={data} />} />
         <Route path="/" element={<Navigate to="/home" />} />

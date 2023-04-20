@@ -1,35 +1,39 @@
 import Section from "../../../common/Section";
-import { List } from "./styled";
+import { StyledDiscover, List } from "./styled";
 import { calculateAge } from "../../calculateAge";
 import RobotTile from "../../../common/RobotTile";
+import { Button } from "../../../common/Button";
 
-const Discover = ({ data, status }) => {
+const Discover = ({ data, status, refetch }) => {
   if (status === "loading") {
     return <Section title="Discover">ładowanie</Section>;
   }
 
   if (data) {
     return (
-      <Section title="Discover">
-        <List>
-          {data.map((object) => {
-            const dateOfBirth = object.date_of_birth;
-            const age = calculateAge(dateOfBirth);
+      <StyledDiscover>
+        <Section title="Discover">
+          <List>
+            {data.map((object) => {
+              const dateOfBirth = object.date_of_birth;
+              const age = calculateAge(dateOfBirth);
 
-            return (
-              <RobotTile
-                id={object.id}
-                key={object.id}
-                picture={object.avatar}
-                name={object.first_name}
-                surname={object.last_name}
-                gender={object.gender}
-                age={age}
-              />
-            );
-          })}
-        </List>
-      </Section>
+              return (
+                <RobotTile
+                  id={object.id}
+                  key={object.id}
+                  picture={object.avatar}
+                  name={object.first_name}
+                  surname={object.last_name}
+                  gender={object.gender}
+                  age={age}
+                />
+              );
+            })}
+          </List>
+        </Section>
+        <Button onClick={() => refetch()}>Refresh</Button>
+      </StyledDiscover>
     );
   }
 };
