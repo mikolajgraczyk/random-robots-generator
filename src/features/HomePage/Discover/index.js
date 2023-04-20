@@ -2,7 +2,7 @@ import Section from "../../../common/Section";
 import { StyledDiscover, List } from "./styled";
 import { calculateAge } from "../../calculateAge";
 import RobotTile from "../../../common/RobotTile";
-import { Button } from "../../../common/Button";
+import { Button } from "../../../common/Button/styled";
 
 const Discover = ({ data, status, refetch }) => {
   if (status === "loading") {
