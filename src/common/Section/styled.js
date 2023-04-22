@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledSection = styled.section`
-  transition: 1s;
+
 `;
 
 export const Title = styled.h1`

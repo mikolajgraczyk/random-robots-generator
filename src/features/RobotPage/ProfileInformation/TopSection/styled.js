@@ -11,6 +11,9 @@ export const StyledTopSection = styled.div`
 
 export const Info = styled.div`
   margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     width: 100%;
@@ -24,7 +27,7 @@ export const BasicInfo = styled.div`
   gap: 12px;
   margin-top: 64px;
 
-  @media(max-width: ${({theme}) => theme.breakpoint.mobile}px){
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     gap: 6px;
     margin-top: 8px;
   }
@@ -33,6 +36,10 @@ export const BasicInfo = styled.div`
 export const SpecificInfo = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    font-size: 18px;
+  }
 `;
 
 export const Gender = styled.span``;
@@ -41,6 +48,7 @@ export const DateOfBirth = styled.span``;
 
 export const Name = styled.span`
   font-size: 64px;
+  font-weight: 700;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 28px;
@@ -50,7 +58,7 @@ export const Name = styled.span`
 export const Age = styled.span`
   font-size: 36px;
 
-  @media(max-width: ${({theme}) => theme.breakpoint.mobile}px){
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 18px;
   }
 `;

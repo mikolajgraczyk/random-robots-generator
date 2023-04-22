@@ -12,7 +12,7 @@ const RobotPage = ({ data }) => {
 
     if (robotData) {
       return (
-        <ProfileInformation
+          <ProfileInformation
           id={id}
           image={robotData.avatar}
           name={robotData.first_name}
