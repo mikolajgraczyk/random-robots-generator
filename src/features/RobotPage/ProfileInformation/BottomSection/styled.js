@@ -28,9 +28,13 @@ export const AdressInfo = styled.div`
 export const AdressInfoSection = styled.span`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 350px;
+  max-width: 450px;
   width: 100%;
   margin: 0 auto;
+
+  @media(max-width: ${({theme}) => theme.breakpoint.mobile}px){
+    margin: 0;
+  }
 `;
 
 export const EmploymentInfo = styled.div`
@@ -48,7 +52,11 @@ export const EmploymentInfo = styled.div`
 export const EmploymentInfoSection = styled.span`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
   margin: 0 auto;
+
+  @media(max-width: ${({theme}) => theme.breakpoint.mobile}px){
+    margin: 0;
+  }
 `;
