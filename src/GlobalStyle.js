@@ -16,5 +16,6 @@ export const GlobalStyle = createGlobalStyle`
     background: linear-gradient(27deg, rgba(0,10,187,1) 0%, rgba(210,0,1,1) 100%);
     background-attachment: fixed;
     background-size: cover;
+    padding: 0 10px;
     }
 `;
