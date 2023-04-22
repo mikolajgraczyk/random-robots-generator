@@ -61,9 +61,9 @@ const ProfileInformation = ({
         phoneNumber={phoneNumber}
         employment={employment}
       />
-      {/* <button onClick={clickHandler}>
+      <button onClick={clickHandler}>
         {isFavourite ? "Remove from favorites" : "Add to favourites"}
-      </button> */}
+      </button>
     </StyledProfileInformation>
   );
 };

@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const StyledBottomSection = styled.div`
   display: flex;
   padding: 0 12px;
-  text-align: center;
+  background: ${({ theme }) => theme.color.blackOpacity70};
+  border-top: 1px black solid;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     flex-direction: column;
@@ -20,30 +21,34 @@ export const AdressInfo = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     border-right: none;
     padding: 11px 0;
+    gap: 20px;
   }
 `;
 
-export const Country = styled.span``;
-
-export const City = styled.span``;
-
-export const Street = styled.span``;
+export const AdressInfoSection = styled.span`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+`;
 
 export const EmploymentInfo = styled.div`
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
+  padding: 11px 0;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     border-top: 1px black solid;
-    padding: 11px 0;
+    gap: 20px;
   }
 `;
 
-export const Title = styled.span``;
-
-export const KeySkill = styled.span``;
-
-export const Email = styled.span``;
-
-export const PhoneNumber = styled.span``;
+export const EmploymentInfoSection = styled.span`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+`;

@@ -1,31 +1,47 @@
 import {
   StyledBottomSection,
   AdressInfo,
-  Country,
-  City,
-  Street,
+  AdressInfoSection,
   EmploymentInfo,
-  Title,
-  KeySkill,
-  Email,
-  PhoneNumber,
+  EmploymentInfoSection,
 } from "./styled";
 
 const BottomSection = ({ email, address, phoneNumber, employment }) => {
   return (
     <StyledBottomSection>
       <AdressInfo>
-        <Country>
-          {address.country}, {address.state}
-        </Country>
-        <City>City: {address.city}</City>
-        <Street>Street: {address.street_name}</Street>
+        <AdressInfoSection>
+          <span>Country:</span>
+          <span>
+            {address.country}, {address.state}
+          </span>
+        </AdressInfoSection>
+        <AdressInfoSection>
+          <span>City:</span>
+          <span>{address.city}</span>
+        </AdressInfoSection>
+        <AdressInfoSection>
+          <span>Street:</span>
+          <span>{address.street_name}</span>
+        </AdressInfoSection>
       </AdressInfo>
       <EmploymentInfo>
-        <Title>Current profession: {employment.title}</Title>
-        <KeySkill>Best skill: {employment.key_skill}</KeySkill>
-        <Email>E-mail: {email}</Email>
-        <PhoneNumber>Phone number: {phoneNumber}</PhoneNumber>
+        <EmploymentInfoSection>
+          <span>Current profession:</span>
+          <span>{employment.title}</span>
+        </EmploymentInfoSection>
+        <EmploymentInfoSection>
+          <span>Best skill:</span>
+          <span>{employment.key_skill}</span>
+        </EmploymentInfoSection>
+        <EmploymentInfoSection>
+          <span>E-mail:</span>
+          <span>{email}</span>
+        </EmploymentInfoSection>
+        <EmploymentInfoSection>
+          <span>Phone number:</span>
+          <span>{phoneNumber}</span>
+        </EmploymentInfoSection>
       </EmploymentInfo>
     </StyledBottomSection>
   );
