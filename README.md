@@ -1,4 +1,21 @@
-# Development in progress... 
+# Random Robots Generator
+
+## Description
+This project was created to practice routing and working with API using TanStack Query. Thanks to simple and free API I was able to create something like social media with randomly-generated users where you can discover new profiles and enter them to see more details.
+
+## Demo
+https://mikolajgraczyk.github.io/random-robots-generator/
+
+## Technologies used in project
+- React
+- JavaScript(ES6+)
+- Styled-components
+- JSX
+- TanStack Query
+- LocalStorage
+- API
+
+In the project directory, you can run:
 
 ### `npm start`
 
