@@ -18,6 +18,7 @@ export const Info = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     width: 100%;
     margin-left: 0;
+    padding: 0 12px;
   }
 `;
 
@@ -67,6 +68,6 @@ export const Picture = styled.img`
   border: 1px black solid;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    width: 125px;
+    width: 150px;
   }
 `;
