@@ -13,7 +13,7 @@ https://mikolajgraczyk.github.io/random-robots-generator/
 - JSX
 - TanStack Query
 - LocalStorage
-- API
+- AP
 
 In the project directory, you can run:
 
