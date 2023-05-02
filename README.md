@@ -6,6 +6,8 @@ This project was created to practice routing and working with API using TanStack
 ## Demo
 https://mikolajgraczyk.github.io/random-robots-generator/
 
+![example](https://github.com/mikolajgraczyk/random-robots-generator/blob/main/demo.gif?raw=true)
+
 ## Technologies used in project
 - React
 - JavaScript(ES6+)
